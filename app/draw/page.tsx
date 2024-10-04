@@ -2,6 +2,7 @@ import React from 'react';
 import DrawingCanvas from '@/components/DrawingCanvas';
 import { CanvasProvider } from '@/context/CanvasContext';
 
+
 const Home: React.FC = () => {
     return (
         <CanvasProvider>

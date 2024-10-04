@@ -1,8 +1,10 @@
 'use client';
 import React from 'react';
 import { FaPencilAlt, FaEraser } from 'react-icons/fa';
+import { IoArrowBack } from "react-icons/io5";
 import { GrPowerReset } from "react-icons/gr";
 import { useCanvas } from '@/context/CanvasContext';
+import {useRouter} from "next/navigation";
 
 const DrawingCanvas: React.FC = () => {
     const {
@@ -29,9 +31,14 @@ const DrawingCanvas: React.FC = () => {
         }
     };
 
-
+    const router=useRouter();
     return (
         <div className="w-full flex flex-col items-center p-4">
+             <button className='fixed top-4 left-4 bg-gray-800 text-white p-2 rounded-full'
+             onClick={()=>router.push('/')}
+             >
+                <IoArrowBack size={24} />
+            </button>
             <div className="mb-4">
                 <input
                     type="color"
