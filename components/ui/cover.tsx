@@ -91,7 +91,7 @@ export const Cover = ({
           key={index}
           hovered={hovered}
           duration={Math.random() * 2 + 1}
-          // delay={Math.random() * 2 + 1}
+          delay={Math.random() * 2 + 1}
           width={containerWidth}
           style={{
             top: `${position}px`,
@@ -219,6 +219,7 @@ export const CircleIcon = ({
 }) => {
   return (
     <div
+    style={{ animationDelay: `${delay}s` }} 
       className={cn(
         `pointer-events-none animate-pulse group-hover/cover:hidden group-hover/cover:opacity-100 group h-2 w-2 rounded-full bg-neutral-600 dark:bg-white opacity-20 group-hover/cover:bg-white`,
         className
