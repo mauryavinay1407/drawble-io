@@ -32,7 +32,6 @@ const DrawingCanvas: React.FC = () => {
 
     return (
         <div className="w-full flex flex-col items-center p-4">
-            {/* Color and Line Width Controls */}
             <div className="mb-4">
                 <input
                     type="color"
@@ -51,7 +50,6 @@ const DrawingCanvas: React.FC = () => {
                 <span>{lineWidth}px</span>
             </div>
 
-            {/* Drawing & Erasing Controls */}
             <div className={`flex mb-4 items-center justify-center w-1/4 shadow-lg shadow-cyan-500/50  rounded-full bg-gray-800 transition-all duration-500 hover:h-20 hover:w-1/3 hover:p-4 hover:cursor-pointer hover:bg-gray-950
                  ${isErasing ? 'h-20 w-1/3 p-4' : 'h-20 p-2'}`}>
                 <div className="flex space-x-4 border-white">
@@ -60,18 +58,16 @@ const DrawingCanvas: React.FC = () => {
                         className={`rounded-full p-2 h-11 w-11 flex items-center justify-center transition duration-300 hover:-translate-y-1.5 ${!isErasing ? 'bg-black hover:bg-gray-600' : 'bg-red-500'}`}
                     >
                         <FaPencilAlt size={20} />
-                        {/* <span className="ml-2">Draw</span> */}
                     </button>
                     <button
                         onClick={toggleEraser}
                         className={`rounded-full p-2 h-11 w-11 flex items-center justify-center transition duration-300 hover:-translate-y-1.5 ${isErasing ? 'bg-gray-700 hover:bg-gray-600' : 'bg-red-500'}`}
                     >
                         <FaEraser size={20} />
-                        {/* <span className="ml-2">Eraser</span> */}
                     </button>
                 </div>
 
-                {/* Eraser Width Control */}
+
                 {isErasing && (
                     <>
                         <input
@@ -86,7 +82,7 @@ const DrawingCanvas: React.FC = () => {
                     </>
                 )}
 
-                {/* Reset Button */}
+
                 <button
                     onClick={resetCanvas}
                     className="bg-slate-400 hover:bg-red-700 text-white font-bold ml-4 transition duration-300 hover:-translate-y-1.5 rounded-full h-10 w-10 flex items-center justify-center"
@@ -95,7 +91,7 @@ const DrawingCanvas: React.FC = () => {
                 </button>
             </div>
 
-            {/* Canvas Element */}
+
             <canvas
                 ref={canvasRef}
                 width={1500}

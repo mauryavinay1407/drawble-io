@@ -12,7 +12,7 @@ interface CanvasContextType {
     draw: (e: React.MouseEvent<HTMLCanvasElement>) => void;
     finishDrawing: () => void;
     toggleEraser: () => void;
-    activateDraw: () => void; // Added
+    activateDraw: () => void; 
     setLineColor: (color: string) => void;
     setLineWidth: (width: number) => void;
     setEraserWidth: (width: number) => void;
